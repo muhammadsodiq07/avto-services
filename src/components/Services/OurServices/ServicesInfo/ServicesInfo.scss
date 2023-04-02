@@ -1,0 +1,138 @@
+@import "../../../../App.scss";
+
+.servicesInfo {
+  &__main-list {
+    margin: -20px;
+    @include d-flex;
+    flex-wrap: wrap;
+  }
+  &__main-item {
+    width: 100%;
+    margin: 20px;
+    cursor: default;
+    padding: 44px 0;
+    max-width: 424px;
+    min-height: 400px;
+    @include d-flex-between;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    span {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 24px;
+      img {
+        object-fit: contain;
+        transition: all 0.2s ease;
+        filter: brightness(1000%) contrast(1000%);
+      }
+    }
+    h4 {
+      margin-bottom: 20px;
+      @include content-title;
+    }
+    p {
+      padding-right: 80px;
+      margin-bottom: 30px;
+      @include content-text;
+    }
+    button {
+      @include d-flex;
+      @include content-text;
+      text-transform: uppercase;
+      span {
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        margin-right: 10px;
+        @include d-flex-jc-center;
+        transition: all 0.2s ease;
+        background: $primary-color-3;
+        border-radius: $border-radius-2;
+      }
+      &:hover {
+        color: $primary-color-3;
+        span {
+          color: $white;
+          margin-right: 15px;
+        }
+      }
+    }
+    &:hover {
+      border-top-color: $primary-color-3;
+      img {
+        filter: brightness(102%) contrast(79%);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    &__main-item {
+      max-width: 350px;
+      max-height: 290px;
+    }
+  }
+  @media screen and (max-width: 1235px) {
+    &__main-item {
+      padding: 30px 0px;
+      max-width: 300px;
+      max-height: 260px;
+      h4 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  @media screen and (max-width: 1065px) {
+    &__main-item {
+      max-width: 280px;
+      max-height: 200px;
+      h4 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  @media screen and (max-width: 985px) {
+    &__main-item {
+      max-width: 380px;
+      max-height: 200px;
+    }
+  }
+  @media screen and (max-width: 865px) {
+    &__main-item {
+      max-width: 340px;
+      max-height: 200px;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    &__main-item {
+      max-width: 300px;
+      max-height: 200px;
+    }
+  }
+  @media screen and (max-width: 685px) {
+    &__main-item {
+      max-width: 280px;
+      max-height: 200px;
+    }
+  }
+  @media screen and (max-width: 645px) {
+    &__main-item {
+      max-width: 250px;
+      max-height: 200px;
+    }
+  }
+  @media screen and (max-width: 585px) {
+    &__main-item {
+      max-width: 100%;
+      max-height: 300px;
+    }
+  }
+}

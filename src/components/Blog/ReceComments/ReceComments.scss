@@ -1,0 +1,19 @@
+@import "../../../App.scss";
+
+.rececomments {
+  @include categoris__box-style;
+
+  &__item {
+    display: flex;
+    margin-bottom: 14px;
+    span {
+      @include mini-span-style;
+      margin-right: 10px;
+      margin-top: 6px;
+    }
+    p {
+      width: 98%;
+      @include content-text;
+    }
+  }
+}

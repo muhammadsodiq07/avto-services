@@ -1,0 +1,201 @@
+@import "../../../App.scss";
+
+.aboutTeam {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100px;
+  &__title {
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    @include section-title;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid $primary-color-7;
+  }
+  &__list {
+    @include d-flex-between;
+
+    flex-wrap: wrap;
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+    margin: 0 14px;
+    cursor: pointer;
+    max-width: 310px;
+    max-height: 340px;
+    position: relative;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    border-top: 2px solid transparent;
+  }
+  &__hover-box {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    position: absolute;
+    @include d-flex-between;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    background-color: $primary-color-9;
+  }
+  &__name-box {
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      margin-bottom: 10px;
+      color: $primary-color-4;
+      text-transform: uppercase;
+    }
+    p {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+  &__icon-box {
+    @include d-flex-between;
+    li {
+      width: 30px;
+      height: 30px;
+      padding: 8px;
+      margin-right: 16px;
+      transition: all 0.3s ease;
+      background-color: $primary-color-3;
+    }
+    svg {
+      color: $white;
+      margin: 0 auto;
+      font-size: 14px;
+      @include d-flex;
+      text-align: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    li:hover {
+      background-color: $white;
+      svg {
+        color: $primary-color-3;
+      }
+    }
+  }
+  &__item:hover {
+    border-top: 2px solid $primary-color-3;
+    .aboutTeam__hover-box {
+      opacity: 1;
+    }
+  }
+
+  // -----------   MEDIA PART  ------------ //
+  @media screen and (max-width: 1400px) {
+    &__item {
+      max-width: 280px;
+      max-height: 300px;
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    &__item {
+      max-width: 250px;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and (max-width: 1136px) {
+    &__list {
+      justify-content: flex-start;
+    }
+    &__item {
+      max-width: 300px;
+    }
+  }
+  @media screen and (max-width: 1010px) {
+    &__item {
+      max-width: 280px;
+      max-height: 280px;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    &__item {
+      max-width: 260px;
+    }
+  }
+  @media screen and (max-width: 890px) {
+    &__item {
+      max-width: 248px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    &__item {
+      max-width: 230px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    &__item {
+      max-width: 220px;
+      max-height: 280px;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    &__list {
+      justify-content: space-between;
+    }
+    &__item {
+      max-width: 300px;
+    }
+    &__hover-box {
+      height: 108%;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    &__item {
+      max-width: 250px;
+      margin-bottom: 30px;
+    }
+    &__hover-box {
+      height: 98%;
+    }
+  }
+  @media screen and (max-width: 570px) {
+    &__title {
+      font-size: 32px;
+    }
+    &__item {
+      max-width: 220px;
+    }
+    &__hover-box {
+      height: 99%;
+    }
+  }
+  @media screen and (max-width: 510px) {
+    &__item {
+      width: 100%;
+      max-width: 472px;
+      max-height: 500px;
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 428px) {
+    &__title {
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 426px) {
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}

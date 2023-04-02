@@ -1,0 +1,73 @@
+@import "../../../App.scss";
+
+.blog-calendar {
+  @include categoris__box-style;
+  &__calendar {
+    .react-calendar {
+      width: 100%;
+      border: none;
+      background: transparent;
+      abbr {
+        color: $white;
+      }
+    }
+    .react-calendar__navigation__label {
+      &:hover {
+        background: #a5a5a52f !important;
+      }
+    }
+    .react-calendar__navigation__label__labelText {
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      text-transform: uppercase;
+    }
+    .react-calendar__navigation__prev2-button,
+    .react-calendar__navigation__next2-button {
+      display: none;
+    }
+    .react-calendar__navigation__prev-button,
+    .react-calendar__navigation__next-button {
+      color: $white;
+      font-size: 24px;
+      &:active {
+        background: #a5a5a52f !important;
+      }
+      &:hover {
+        background: #a5a5a52f !important;
+      }
+      &:focus {
+        background: $primary-color-11 !important;
+      }
+    }
+    .react-calendar__navigation {
+      background: $primary-color-11;
+    }
+    .react-calendar__navigation button:disabled {
+      background: #a5a5a52f !important;
+    }
+    .react-calendar__month-view__days__day {
+      &:hover {
+        background: #a5a5a52f !important;
+      }
+    }
+    .react-calendar__tile--now {
+      background: $primary-color-3;
+      &:hover {
+        background: $primary-color-3 !important;
+      }
+    }
+    .react-calendar__month-view__days__day--neighboringMonth {
+      opacity: 0.3;
+    }
+    .react-calendar__tile--active {
+      &:hover {
+        background: #006edc !important;
+      }
+    }
+    .react-calendar__month-view__weekdays {
+      padding-bottom: 20px;
+    }
+  }
+}

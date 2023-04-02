@@ -1,0 +1,46 @@
+@import "../../../App.scss";
+
+.spend {
+  background-color: $primary-color-1;
+  &__inner {
+    @include d-flex-between;
+  }
+  &__left {
+    @include d-flex;
+    margin-right: 16px;
+    padding: 160px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    width: 100%;
+    max-width: 660px;
+    margin-bottom: 20px;
+    @include section-title;
+    transition: all 0.3s ease;
+  }
+  &__text {
+    width: 100%;
+    max-width: 580px;
+    margin-bottom: 38px;
+    @include section-text;
+    transition: all 0.3s ease;
+  }
+  &__btn {
+    @include button-style;
+    width: 100%;
+    font-size: 18px;
+    max-width: 200px;
+    font-weight: 700;
+    line-height: 23px;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    span {
+      background-color: $primary-color-1;
+    }
+  }
+  &__right {
+    width: 800px;
+    height: 620px;
+  }
+}

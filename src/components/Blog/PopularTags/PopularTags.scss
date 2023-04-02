@@ -1,0 +1,27 @@
+@import "../../../App.scss";
+
+.populartags {
+  @include categoris__box-style;
+
+  &__list {
+    @include d-flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+  &__item {
+    margin: 10px;
+    a {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px;
+      padding: 10px 14px;
+      color: $primary-color-4;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      background: $primary-color-11;
+      &:hover {
+        background: $primary-color-3;
+      }
+    }
+  }
+}

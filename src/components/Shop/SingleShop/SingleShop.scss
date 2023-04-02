@@ -1,0 +1,66 @@
+@import "../../../App.scss";
+
+.singleShop {
+  width: 100%;
+  position: relative;
+  padding: 160px 0px;
+  &__title {
+    width: 100%;
+    max-width: 580px;
+    @include section-title;
+    margin-bottom: 20px;
+  }
+  &__span {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 20px;
+    color: $primary-color-4;
+  }
+  &__icons {
+    @include d-flex;
+    margin-bottom: 30px;
+    svg {
+      margin-right: 10px;
+      color: $primary-color-3;
+    }
+  }
+  &__text {
+    width: 100%;
+    max-width: 640px;
+    @include section-text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 60px;
+  }
+  &__btn {
+    @include button-style;
+    width: 100%;
+    max-width: 195px;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+    span {
+      background-color: $primary-color-2;
+    }
+  }
+  &__span-box {
+    width: 100%;
+    max-width: 275px;
+    margin-bottom: 90px;
+    span {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-bottom: 8px;
+    }
+  }
+  &__products {
+    width: 100%;
+    padding-top: 160px;
+  }
+  &__products-title {
+    @include section-title;
+  }
+}

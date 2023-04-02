@@ -1,0 +1,187 @@
+@import "./veriables.scss";
+/* ================================= FONTS =========================================== */
+@mixin font-Montserrat {
+  font-style: normal;
+  font-family: $f-family-Montserrat;
+}
+/* ================================== POSITIONS ========================================== */
+@mixin position-fx {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+@mixin position-sty {
+  top: 0;
+  left: 0;
+  position: sticky;
+}
+@mixin position-ab {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+@mixin position-ab-tt {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+/* ================================== DISPLAY - FLEX ========================================== */
+@mixin d-flex {
+  display: flex;
+  align-items: center;
+}
+@mixin d-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin d-flex-jc-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin d-flex-fd-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* ================================= TITLES - TEXTS =========================================== */
+@mixin navItem {
+  color: $white;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+@mixin hero-title {
+  font-size: 66px;
+  font-weight: 700;
+  line-height: 73px;
+  letter-spacing: 3px;
+  color: $primary-color-4;
+  text-transform: uppercase;
+}
+@mixin section-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55px;
+  color: $primary-color-4;
+  text-transform: uppercase;
+}
+@mixin content-title {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $primary-color-4;
+  text-transform: uppercase;  
+}
+@mixin categories_titles {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: $primary-color-4;
+  text-transform: uppercase;
+}
+@mixin section-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $primary-color-4;
+}
+@mixin content-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $primary-color-4;
+}
+@mixin service-name {
+  -webkit-text-stroke: 3px $primary-color-3;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: transparent;
+  line-height: 149px;
+  font-size: 130px;
+  font-weight: 700;
+  opacity: 0.6;
+}
+/* ================================== BUTTON ========================================== */
+@mixin button-style {
+  color: $white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  padding: 20px 32px;
+  position: relative;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: $box-shadow-btn;
+  background: $primary-color-3;
+  border: 2.4px solid $primary-color-3;
+  span {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    transform: rotate(45deg);
+    background: $primary-color-5;
+    &::before {
+      width: 2px;
+      content: "";
+      height: 100%;
+      position: absolute;
+      transition: all 0.2s ease;
+      background: $primary-color-3;
+    }
+  }
+  :first-child {
+    top: -12px;
+    left: -7px;
+    &::before {
+      right: 0;
+      bottom: 0;
+    }
+  }
+  :last-child {
+    right: -7px;
+    bottom: -12px;
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+  &:hover {
+    color: $primary-color-3;
+    background: transparent;
+  }
+  &:active {
+    color: $primary-color-6;
+    border-color: $primary-color-6;
+    span::before {
+      background: $primary-color-6;
+    }
+  }
+}
+@mixin categoris__box-style {
+  width: 100%;
+  max-width: 400px;
+  padding-top: 30px;
+  position: relative;
+  padding-bottom: 50px;
+  border-top: 2px solid $primary-color-4;
+  h4 {
+    margin-bottom: 24px;
+    @include categories_titles;
+  }
+}
+@mixin mini-span-style {
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+  background: $primary-color-3;
+  border-radius: $border-radius-1 0;
+}

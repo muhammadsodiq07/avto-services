@@ -1,0 +1,66 @@
+@import "../../../App.scss";
+
+.recentposts {
+  width: 100%;
+  @include categoris__box-style;
+  &__item {
+    @include d-flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    &:hover {
+      background: #0002;
+    }
+  }
+  &__item-img {
+    width: 140px;
+    height: 110px;
+    margin-right: 20px;
+  }
+  &__item-desc {
+    width: 100%;
+    max-width: 240px;
+    h5 {
+      color: $white;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    p {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      span {
+        @include mini-span-style;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .recentposts {
+    &__item-img {
+      width: 100px;
+      height: 80px;
+    }
+    &__item-desc {
+      max-width: 180px;
+      h5 {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 10px;
+        line-height: 14px;
+        span {
+          width: 4px;
+          height: 4px;
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}

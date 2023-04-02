@@ -1,0 +1,37 @@
+@import "../../../App.scss";
+
+.book {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://mediapool.bmwgroup.com/cache/P9/202106/P90428171/P90428171-bmw-x5-black-vermilion-edition-07-2021-2250px.jpg");
+  &__inner {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 195px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include section-title;
+    transition: all 0.3s ease;
+  }
+  &__text {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 510px;
+    margin-bottom: 40px;
+    @include section-text;
+  }
+  &__btn {
+    border-radius: 8px;
+    @include button-style;
+  }
+  // -----------   MEDIA PART  ------------ //
+  @media screen and (max-width: 455px) {
+    &__title {
+      font-size: 28px;
+    }
+  }
+}

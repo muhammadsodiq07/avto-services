@@ -1,0 +1,126 @@
+@import "../../../App.scss";
+
+.home-request {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  &__inner {
+    width: 100%;
+    padding-top: 40px;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 20px;
+    @include section-title;
+    span {
+      @include position-ab;
+      z-index: -1;
+      top: -30px;
+      left: 0;
+    }
+  }
+  &__text {
+    width: 50%;
+    margin-bottom: 40px;
+    @include section-text;
+  }
+  &__form {
+    width: 100%;
+    position: relative;
+  }
+  &__form-inputs {
+    width: 100%;
+    @include d-flex-between;
+    div {
+      width: 48%;
+    }
+  }
+  &__input-box {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    flex-direction: column;
+    label {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      margin-bottom: 14px;
+      color: $primary-color-4;
+      text-transform: uppercase;
+    }
+    input,
+    textarea {
+      border: none;
+      resize: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      padding-bottom: 12px;
+      background: transparent;
+      color: $primary-color-12;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      &[type="time"]::-webkit-calendar-picker-indicator {
+        font-size: 20px;
+        background-image: url("https://www.citypng.com/public/uploads/small/11639648068zrczmrfbcyl9m3tsmcyutayrfaeerahe2qgbk999aq5riibknqox8hk89mk4ze5ubfi7v7mflouzuvw9tarx53uffbmnmbdtxfgd.png");
+      }
+      &[type="date"]::-webkit-calendar-picker-indicator {
+        font-size: 20px;
+        background-image: url("https://icon-library.com/images/calendar-icon-white-png/calendar-icon-white-png-3.jpg");
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+  &__form-btn {
+    @include button-style;
+    span {
+      background: $primary-color-2;
+    }
+  }
+}
+// MEDIA PART = = = = = = = = = = = = = = = = = =
+@media screen and (max-width: 992px) {
+  .home-request {
+    &__inner {
+      padding-bottom: 70px;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  .home-request {
+    &__inner {
+      padding-bottom: 50px;
+    }
+    &__title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 14px;
+      span {
+        line-height: 60px;
+        font-size: 50px;
+        top: -20px;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__form-inputs {
+      flex-direction: column;
+      div {
+        width: 100%;
+      }
+    }
+    &__form-btn {
+      width: 100%;
+      padding: 14px 20px;
+    }
+  }
+}

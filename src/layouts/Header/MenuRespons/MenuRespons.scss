@@ -1,0 +1,77 @@
+@import "../../../App.scss";
+
+.head-menu {
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  height: 100vh;
+  overflow: hidden;
+  @include position-fx;
+  transition: all 0.5s ease;
+  &__backdrop {
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    @include position-ab;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+  }
+  &__inner {
+    background: $primary-color-2;
+    transition: all 0.7s ease;
+    @include position-ab-tt;
+    min-height: 750px;
+    max-width: 990px;
+    padding: 40px;
+    height: auto;
+    z-index: 99;
+    width: 94%;
+    top: -100%;
+  }
+  &__btn {
+    text-align: right;
+    margin-bottom: 80px;
+    button {
+      color: $white;
+      font-size: 40px;
+    }
+  }
+  &__nav {
+    @include d-flex-jc-center;
+    flex-direction: column;
+    button {
+      margin-right: 0;
+      margin-bottom: 30px;
+      span {
+        background: $primary-color-2;
+      }
+    }
+  }
+  &__item {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+.menuOpen {
+  opacity: 1;
+  z-index: 100;
+  .head-menu__inner {
+    top: 50%;
+  }
+}
+// = = = = = = = = = == MEDIA PART == = = = = = = = = =
+@media screen and (max-width: 1060px) {
+  .head-menu {
+    &__lang {
+      @include d-flex;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .head-menu {
+    &__request-a-call {
+      display: block;
+    }
+  }
+}

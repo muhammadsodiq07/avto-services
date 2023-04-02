@@ -1,0 +1,81 @@
+@import "../../../App.scss";
+
+.shop-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100px;
+  &__title {
+    @include section-title;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .splide__list {
+    display: flex !important;
+  }
+  .splide__slide {
+    padding: 10px;
+    height: 152px !important;
+    min-width: 322px !important;
+    img {
+      border: 2px solid $white;
+    }
+  }
+  &__activeImg {
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.5s ease;
+    @include position-ab-tt;
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    div {
+      width: 100%;
+      height: 100%;
+      z-index: 800;
+      @include position-ab;
+    }
+    button {
+      @include position-ab;
+      line-height: 58px;
+      font-size: 50px;
+      color: $white;
+      right: 30px;
+      left: auto;
+      top: 30px;
+    }
+    img {
+      width: 90%;
+      z-index: 900;
+      height: 600px;
+      max-width: 1000px;
+      @include position-ab-tt;
+      transition: all 0.5s ease;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop-slider {
+    &__activeImg {
+      img {
+        height: 400px;
+        max-width: 500px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop-slider {
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    &__activeImg {
+      img {
+        height: 300px;
+        max-width: 400px;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../App.scss";
+
+.reviews {
+  &__inner {
+    p {
+      @include content-text;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../../App.scss";
+
+.description {
+  &__inner {
+    p {
+      @include content-text;
+      line-height: 32px;
+    }
+  }
+}

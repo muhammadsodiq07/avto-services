@@ -1,0 +1,39 @@
+@import "../../../App.scss";
+
+.singleInfo {
+  margin-bottom: 160px;
+  &__list {
+    @include d-flex;
+    padding-bottom: 18px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid $primary-color-7;
+    li {
+      cursor: pointer;
+      margin-right: 60px;
+      @include content-title;
+      transition: all 0.3s ease;
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    @include content-title;
+    transition: all 0.3s ease;
+  }
+  &__item-acvtive {
+    &::after {
+      content: "";
+      left: 0;
+      width: 100%;
+      bottom: -20px;
+      position: absolute;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid $primary-color-3;
+    }
+  }
+  &__info-list {
+    padding-top: 42px;
+  }
+}

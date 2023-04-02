@@ -1,0 +1,17 @@
+@import "../../../../App.scss";
+
+.additional {
+  &__item {
+    @include d-flex;
+    margin-bottom: 24px;
+    p {
+      width: 100%;
+      max-width: 180px;
+      margin-right: 90px;
+      @include content-text;
+    }
+    span {
+      @include content-text;
+    }
+  }
+}
